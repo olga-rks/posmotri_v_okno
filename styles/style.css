@@ -57,6 +57,7 @@ ol {
   margin: 0;
   padding: 78px 0 16px 0;
   min-width: 711px;
+  position: relative;
   border: 1px solid red;
 }
 
@@ -111,6 +112,7 @@ ol {
   padding: 0;
   max-height: 325px;
   overflow: auto;
+  position: relative;
   border: 1px solid red;
 }
 
