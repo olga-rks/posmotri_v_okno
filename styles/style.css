@@ -64,7 +64,6 @@ ol {
 }
 
 .result__video {
-  background-color: inherit;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -143,6 +142,10 @@ ol {
   gap: 15px;
 }
 
+.search-form__checkbox {
+  appearance: none;
+}
+
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
@@ -180,7 +183,7 @@ ol {
   cursor: pointer;
   background-color: transparent;
   color: currentColor;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
