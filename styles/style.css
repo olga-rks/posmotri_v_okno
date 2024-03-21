@@ -39,12 +39,12 @@ ol {
 
 .content {
   margin: 0 auto;
-  padding: 133px 30px;
+  padding: 116px 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 30px;
+  gap: 28px;
 }
 
 .visually-hidden {
@@ -59,11 +59,12 @@ ol {
 
 .result__video-container {
   min-width: 711px;
-  padding: 78px 0 16px 0;
+  padding: 78px 0 15px 0;
   position: relative;
 }
 
 .result__video {
+  background-color: inherit;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -179,13 +180,14 @@ ol {
   cursor: pointer;
   background-color: transparent;
   color: currentColor;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  line-height: 21.6px;
+  line-height: 20px;
   text-align: center;
   border: 1px solid #fff;
   margin: 0;
-  padding: 6px 73.5px;
+  padding: 6px 72px;
 }
 
 .search-form__submit-button:active {
@@ -197,6 +199,10 @@ ol {
 }
 
 .search-form__submit-button:focus {
+  outline: none;
+}
+
+.search-form__submit-button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -208,7 +214,7 @@ ol {
   line-height: 70.5px;
   text-transform: uppercase;
   color: #fff;
-  padding: 0 0 26px 0;
+  padding: 0 0 20px 0;
 }
 
 .content__accent {
@@ -224,7 +230,7 @@ ol {
 }
 
 .content__list-item {
-  margin: 0 0 30px 0;
+  margin: 0 0 26px 0;
 }
 
 .content__list-item:last-of-type {
@@ -235,6 +241,28 @@ ol {
   color: currentColor;
   text-decoration: none;
   cursor: pointer;
+  display: block;
+  margin: 2px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  cursor: pointer;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__video-card {
