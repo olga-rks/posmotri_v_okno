@@ -41,7 +41,7 @@ ol {
 }
 
 .content {
-  margin: 0 auto;
+  margin: auto;
   padding: 133px 30px;
   display: flex;
   flex-direction: row;
@@ -64,16 +64,18 @@ ol {
 .result {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: stretch;
   gap: 16px;
-  margin: 78px 0 0 0;
+  margin: 0;
   padding: 0;
   flex-basis: 711px;
 }
 
 .result__video-container {
   position: relative;
-  max-height: 386px;
+  width: 711px;
+  height: 386px;
 }
 
 .result__video {
@@ -96,10 +98,10 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: 1.2em;
   color: #fff;
   padding: 0 0 5px 0;
 }
@@ -126,32 +128,26 @@ ol {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.6px;
-  color: rgba(255, 255, 255, .7);
+  line-height: 1.2em;
+  color: #fff;
   border-top: 1px solid #fff;
   border-right: none;
   border-bottom: 1px solid #fff;
   border-left: none;
   min-width: 225px;
+  text-decoration: none;
+  cursor: text;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, .7);
 }
 
 .search-form__textfield:active {
   border: 1px solid #fff;
 }
 
-.search-form__textfield:hover {
-  border-top: 1px solid #fff;
-  border-right: none;
-  border-bottom: 1px solid #fff;
-  border-left: none;
-  cursor: text;
-}
-
 .search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__textfield:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -182,18 +178,18 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
-  width: 13px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   background-color: #fff;
 }
 
 .search-form__label-text {
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: 1.2em;
 }
 
-.search-form__label:has(.search-form__label-text):hover {
+.search-form__label:has(.search-form__pseudo-checkbox):hover {
   text-decoration: underline;
 }
 
@@ -203,25 +199,26 @@ ol {
   background-color: transparent;
   color: currentColor;
   font-family: inherit;
-  font-size: 18px;
+  font-size: inherit;
   font-weight: 700;
-  line-height: 21.6px;
+  line-height: 1.2em;
   text-align: center;
   border: 1px solid #fff;
   margin: 0;
   padding: 6px 72px;
 }
 
+.button:hover {
+  text-decoration: underline;
+}
+
 .search-form__submit-button:active {
   background-color: rgba(84, 80, 80, 1);
 }
 
-.search-form__submit-button:hover {
-  text-decoration: underline;
-}
-
 .search-form__submit-button:focus {
-  outline: none;
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
 .search-form__submit-button:focus-visible {
@@ -233,6 +230,7 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: stretch;
   gap: 26px;
   margin: 0;
   padding: 0;
@@ -251,7 +249,8 @@ ol {
 }
 
 .content__list {
-  max-height: 295px;
+  height: 295px;
+  width: 404px;
   overflow: auto;
   position: relative;
   display: flex;
@@ -264,6 +263,7 @@ ol {
   color: currentColor;
   text-decoration: none;
   cursor: pointer;
+  margin: 3px;
 }
 
 .content__card-link_current {
@@ -271,7 +271,6 @@ ol {
 }
 
 .content__card-link:hover {
-  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -280,7 +279,8 @@ ol {
 }
 
 .content__card-link:focus {
-  outline: none;
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
 .content__card-link:focus-visible {
@@ -307,25 +307,39 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
   font-size: 18px;
   font-weight: 400;
-  line-height: 16.2px;
+  line-height: 0.9em;
   padding: 0 6px 0 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  max-height: 103px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .content__video-card-thumbnail {
   display: block;
-  max-width: 194px;
+  width: 194px;
+  height: 103px;
   object-fit: cover;
   object-position: center;
 }
 
 .more-button {
   width: 100%;
+}
+
+.more-button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+.more-button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
 }
