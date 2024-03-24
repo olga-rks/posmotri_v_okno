@@ -125,15 +125,15 @@ ol {
 .search-form__textfield {
   appearance: none;
   background-color: transparent;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2em;
   color: #fff;
   border-top: 1px solid #fff;
-  border-right: none;
+  border-right: 1px solid transparent;
   border-bottom: 1px solid #fff;
-  border-left: none;
+  border-left: 1px solid transparent;
   min-width: 225px;
   text-decoration: none;
   cursor: text;
@@ -148,8 +148,7 @@ ol {
 }
 
 .search-form__textfield:focus {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline: none;
 }
 
 .search-form__checkbox-list {
@@ -189,13 +188,12 @@ ol {
   line-height: 1.2em;
 }
 
-.search-form__label:has(.search-form__pseudo-checkbox):hover {
+.search-form__label:hover:has(.search-form__pseudo-checkbox) {
   text-decoration: underline;
 }
 
 .button {
   align-self: flex-end;
-  cursor: pointer;
   background-color: transparent;
   color: currentColor;
   font-family: inherit;
@@ -206,24 +204,24 @@ ol {
   border: 1px solid #fff;
   margin: 0;
   padding: 6px 72px;
+  cursor: pointer;
 }
 
 .button:hover {
   text-decoration: underline;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
 .search-form__submit-button:active {
   background-color: rgba(84, 80, 80, 1);
-}
-
-.search-form__submit-button:focus {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-
-.search-form__submit-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
 }
 
 .content__details {
@@ -255,7 +253,7 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 22px;
 }
 
 .content__card-link {
@@ -334,12 +332,6 @@ ol {
   width: 100%;
 }
 
-.more-button:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
-}
-
 .more-button:focus-visible {
-  outline: 1px solid #fff;
   outline-offset: -4px;
 }
